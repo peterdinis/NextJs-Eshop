@@ -1,7 +1,7 @@
 "use client"
 
 import { ReactElement } from 'react';
-import { Box, SimpleGrid, Icon, Text, Stack, Flex } from '@chakra-ui/react';
+import { Box, SimpleGrid, Icon, Text, Stack, Flex, Center } from '@chakra-ui/react';
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
 
 interface FeatureProps {
@@ -33,7 +33,10 @@ const Feature = ({ title, text, icon }: FeatureProps) => {
 export default function Services() {
   return (
     <Box p={4}>
-      <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10}>
+      <Center>
+        <Text fontWeight={600} fontSize='3xl'>Our Services</Text>
+      </Center>
+      <SimpleGrid mt={6} columns={{ base: 1, md: 3 }} spacing={10}>
         <Feature
           icon={<Icon as={FcAssistant} w={10} h={10} />}
           title={'Lifetime Support'}
