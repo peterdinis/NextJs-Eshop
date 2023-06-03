@@ -2,7 +2,7 @@
 
 import { Inter } from 'next/font/google'
 import { ChakraProvider } from '@chakra-ui/react'
-import GlobalStyle from './Globall.styled'
+import GlobalStyle from '../styles/Global.styled'
 import Seo from '@/components/shared/Seo'
 
 const inter = Inter({ subsets: ['latin'] });
