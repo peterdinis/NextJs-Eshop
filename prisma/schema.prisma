@@ -19,11 +19,29 @@ model User {
 }
 
 model Product {
-  id          Int     @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   name        String
   type        String
   avaiable    Boolean
   price       Int
   image       String
   description String
+  card        Card[]
+  category    Category @relation(fields: [categoryId], references: [id])
+  categoryId  Int
+}
+
+model Category {
+  id          Int       @id @default(autoincrement())
+  name        String    @unique
+  description String
+  products    Product[]
+}
+
+model Card {
+  id         Int     @id @default(autoincrement())
+  product    Product @relation(fields: [productId], references: [id])
+  productId  Int
+  amount     Int     @default(1)
+  totalPrice Decimal
 }
