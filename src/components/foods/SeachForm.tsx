@@ -1,12 +1,10 @@
 "use client"
 
-import { Container } from "@chakra-ui/react";
-
 const SearchForm: React.FC = () => {
     return (
-        <Container>
+        <div>
         I AM SEARCH FORM
-        </Container>
+        </div>
     )
 }
 

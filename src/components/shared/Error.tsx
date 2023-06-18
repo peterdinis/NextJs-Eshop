@@ -1,32 +1,11 @@
-import { useToast, Button } from "@chakra-ui/react";
+"use client"
 
-interface IErrorProps {
-  message: string;
-}
-
-const Error: React.FC<IErrorProps> = ({message}: IErrorProps) => {
-  const toast = useToast({
-    position: "top",
-    title: "Container style is updated",
-    containerStyle: {
-      width: "800px",
-      maxWidth: "100%",
-    },
-  });
-
+const Error: React.FC = () => {
   return (
-    <Button
-      onClick={() => {
-        toast({
-          containerStyle: {
-            border: "20px solid red",
-          },
-        });
-      }}
-    >
-      {message}
-    </Button>
-  );
-};
+    <>
+    rrr
+    </>
+  )
+}
 
 export default Error;
