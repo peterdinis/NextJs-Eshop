@@ -1,64 +1,24 @@
 "use client"
 
-import {
-    Box,
-    chakra,
-    Container,
-    Stack,
-    Text,
-    useColorModeValue,
-    VisuallyHidden,
-  } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-  import { ReactNode } from 'react';
-  
-  const SocialButton = ({
-    children,
-    label,
-    href,
-  }: {
-    children: ReactNode;
-    label: string;
-    href: string;
-  }) => {
-    return (
-      <chakra.button
-        bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-        rounded={'full'}
-        w={8}
-        h={8}
-        cursor={'pointer'}
-        as={'a'}
-        href={href}
-        display={'inline-flex'}
-        alignItems={'center'}
-        justifyContent={'center'}
-        transition={'background 0.3s ease'}
-        _hover={{
-          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-        }}>
-        <VisuallyHidden>{label}</VisuallyHidden>
-        {children}
-      </chakra.button>
-    );
-  };
-  
-  export default function Footer() {
-    return (
-      <Box
-        mt={6}
-        bg={useColorModeValue('gray.50', 'gray.900')}
-        color={useColorModeValue('gray.700', 'gray.200')}>
-        <Container
-          as={Stack}
-          maxW={'6xl'}
-          py={4}
-          direction={{ base: 'column', md: 'row' }}
-          spacing={4}
-          justify={{ base: 'center', md: 'space-between' }}
-          align={{ base: 'center', md: 'center' }}>
-          <Text fontWeight={600}>&copy; NextJS Food Eshop 2023</Text>
-        </Container>
-      </Box>
-    );
-  }
+const Footer: React.FC = () => {
+  return (
+    <footer className="relative bg-gray-400 pt-8 pb-6 mt-1">
+    <div className="container mx-auto px-4">
+      <div className="flex flex-wrap items-center md:justify-between justify-center">
+        <div className="w-full md:w-6/12 px-4 mx-auto text-center">
+          <div className="text-sm text-blueGray-500 font-semibold py-1">
+            <a
+              href="https://www.spsbj.sk/"
+              className="text-blueGray-500 text-2xl hover:text-gray-800"
+            >
+              &copy; FoodEshop 2023
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  )
+}
+
+export default Footer;

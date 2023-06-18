@@ -1,16 +1,10 @@
 "use client"
 
-import { Center, Heading } from "@chakra-ui/react";
-
-interface IHeaderProps {
-    name: string
-}
-
-const Header: React.FC<IHeaderProps> = ({name}: IHeaderProps) => {
+const Header: React.FC = () =>{
     return (
-        <Center mt={6}>
-            <Heading>{name}</Heading>
-        </Center>
+        <>
+        ffff
+        </>
     )
 }
 
