@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
     <nav className="bg-gray-400">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 border-b border-solid border-slate-600">
         <div className="flex-shrink-0 font-bold tracking-wider">
-          LOGO
+          Food Eshop
         </div>
         <div className="hidden md:block">
           <Menu />
