@@ -1,4 +1,5 @@
 import Hero from "@/components/hero/Hero";
+import Services from "@/components/hero/Services";
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import { NextPage } from "next";
@@ -13,6 +14,7 @@ const Homepage: NextPage = () => {
         description="Discover a variety of delicious dishes!"
         buttonText="Order Now"
       />
+      <Services />
       <Footer />
     </>
   )
