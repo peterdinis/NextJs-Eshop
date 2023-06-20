@@ -18,7 +18,7 @@ model User {
   password String
 }
 
-model Product {
+model Food {
   id          Int      @id @default(autoincrement())
   name        String
   type        String
@@ -32,16 +32,16 @@ model Product {
 }
 
 model Category {
-  id          Int       @id @default(autoincrement())
-  name        String    @unique
+  id          Int    @id @default(autoincrement())
+  name        String @unique
   description String
-  products    Product[]
+  foods       Food[]
 }
 
 model Card {
   id         Int     @id @default(autoincrement())
-  product    Product @relation(fields: [productId], references: [id])
-  productId  Int
+  food       Food    @relation(fields: [foodId], references: [id])
+  foodId     Int
   amount     Int     @default(1)
   totalPrice Decimal
 }
