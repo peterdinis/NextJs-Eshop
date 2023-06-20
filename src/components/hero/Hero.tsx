@@ -20,7 +20,7 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, description, buttonText })
       </div>
       <div className="flex flex-col justify-center items-center h-full relative">
         <h1 className="text-6xl font-bold text-white mb-4 text-shadow-md">{title}</h1>
-        <p className="text-lg text-shadow-md text-xl text-white mb-8">{description}</p>
+        <p className="text-lg text-shadow-md  text-white mb-8">{description}</p>
         <a
           href="#menu"
           className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-full uppercase tracking-wide text-shadow-md"
