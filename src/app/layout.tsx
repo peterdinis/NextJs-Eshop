@@ -2,6 +2,13 @@
 
 import { Inter } from 'next/font/google';
 import "../styles/main.css";
+import {Metadata} from "next";
+import Head from 'next/head';
+
+export const metadata: Metadata = {
+  title: 'MyFoodShop'
+}
+ 
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -12,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <Head>
+        <title>PING</title>
+      </Head>
+      <body  className={inter.className}>{children}</body>
     </html>
   )
 }
