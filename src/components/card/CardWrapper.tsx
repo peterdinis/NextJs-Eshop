@@ -1,9 +1,11 @@
 "use client"
 
+import Header from "../shared/Header"
+
 const CardWrapper: React.FC = () => {
     return (
         <>
-            <span>I am card</span>
+            <Header name="My Card" />
         </>
     )
 }
