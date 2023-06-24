@@ -1,5 +1,7 @@
+import { QueryClientProvider } from '@tanstack/react-query';
 import '../styles/main.css'
 import { Inter } from 'next/font/google'
+import { queryClient } from '@/api/queryClient';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <QueryClientProvider client={queryClient}>
+        <body className={inter.className}>{children}</body>
+      </QueryClientProvider>
     </html>
   )
 }

@@ -25,7 +25,7 @@ const Menu = () => {
             href="/card"
             className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700"
         >
-            Card
+            Card 0
         </Link>
         <Link
             href="/auth/register"
