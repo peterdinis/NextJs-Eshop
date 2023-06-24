@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: 'MyFoodShop'
 }
  
-
 const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
