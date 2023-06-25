@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import React from 'react';
+import React from "react";
+import DateTimePicker from "../shared/DateTimePicker";
 
 interface HeroProps {
   imageUrl: string;
@@ -9,7 +10,12 @@ interface HeroProps {
   buttonText: string;
 }
 
-const Hero: React.FC<HeroProps> = ({ imageUrl, title, description, buttonText }) => {
+const Hero: React.FC<HeroProps> = ({
+  imageUrl,
+  title,
+  description,
+  buttonText,
+}) => {
   return (
     <section className="relative h-screen">
       <div className="absolute inset-0 z-[-1]">
@@ -19,7 +25,9 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, description, buttonText })
         ></div>
       </div>
       <div className="flex flex-col justify-center items-center h-full relative">
-        <h1 className="text-6xl font-bold text-white mb-4 text-shadow-md">{title}</h1>
+        <h1 className="text-6xl font-bold text-white mb-4 text-shadow-md">
+          {title}
+        </h1>
         <p className="text-lg text-shadow-md  text-white mb-8">{description}</p>
         <a
           href="#menu"
@@ -27,6 +35,7 @@ const Hero: React.FC<HeroProps> = ({ imageUrl, title, description, buttonText })
         >
           {buttonText}
         </a>
+        <DateTimePicker />
       </div>
     </section>
   );
