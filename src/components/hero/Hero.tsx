@@ -2,6 +2,7 @@
 
 import React from "react";
 import DateTimePicker from "../shared/DateTimePicker";
+import Link from "next/link";
 
 interface HeroProps {
   imageUrl: string;
@@ -29,12 +30,12 @@ const Hero: React.FC<HeroProps> = ({
           {title}
         </h1>
         <p className="text-lg text-shadow-md  text-white mb-8">{description}</p>
-        <a
-          href="#menu"
+        <Link
+          href="/foods"
           className="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-6 rounded-full uppercase tracking-wide text-shadow-md"
         >
           {buttonText}
-        </a>
+        </Link>
         <DateTimePicker />
       </div>
     </section>

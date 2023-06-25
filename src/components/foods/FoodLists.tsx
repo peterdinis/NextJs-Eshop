@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import ScrollToTop from '@/hooks/useScroll';
 import Header from '../shared/Header';
 import Link from 'next/link';
+import FoodSearch from './FoodSearch';
 
 const FoodLists: React.FC = () => {
   const itemVariants = {
@@ -20,6 +21,7 @@ const FoodLists: React.FC = () => {
   return (
     <>
       <Header name="All Foods" />
+      <FoodSearch />
       <div className="grid grid-cols-4 gap-4 mt-4">
         <motion.div
           className="bg-white p-4 shadow-md rounded-md"
