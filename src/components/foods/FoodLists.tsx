@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import ScrollToTop from '@/hooks/useScroll';
 import Header from '../shared/Header';
 import Link from 'next/link';
-import FoodSearch from './FoodSearch';
+import CustomInput from '../shared/CustomInput';
 
 const FoodLists: React.FC = () => {
   const itemVariants = {
@@ -21,7 +21,8 @@ const FoodLists: React.FC = () => {
   return (
     <>
       <Header name="All Foods" />
-      <FoodSearch />
+      <CustomInput type={'text'} placeholder={'Search'} style={'p-2 rounded-md border-gray-300 focus:outline-none focus:border-blue-400'} value={undefined}      
+      />
       <div className="grid grid-cols-4 gap-4 mt-4">
         <motion.div
           className="bg-white p-4 shadow-md rounded-md"

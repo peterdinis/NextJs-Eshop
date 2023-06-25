@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({
   title,
   description,
   buttonText,
-}) => {
+}: HeroProps) => {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

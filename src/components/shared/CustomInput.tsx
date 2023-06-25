@@ -1,3 +1,5 @@
+"use client"
+
 import { useFn } from "@/hooks/useFn";
 
 interface ICustomInputProps {
@@ -16,13 +18,15 @@ const CustomInput: React.FC<ICustomInputProps> = ({
   const fn = useFn();
 
   return (
-    <input
-      type={type}
-      value={value}
-      onChange={fn}
-      placeholder={placeholder}
-      className={style}
-    />
+    <div className="flex justify-center align-top mt-4">
+      <input
+        type={type}
+        value={value}
+        onChange={fn}
+        placeholder={placeholder}
+        className={style}
+      />
+    </div>
   );
 };
 
