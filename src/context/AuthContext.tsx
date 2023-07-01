@@ -1,3 +1,5 @@
+"use client"
+
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { auth } from '../lib/firebase';
 import {
@@ -8,11 +10,12 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   signOut,
+  User,
   confirmPasswordReset,
 } from 'firebase/auth';
 
 interface AuthContextProps {
-  currentUser: any;
+  currentUser:User | null;
   signInWithGoogle: () => Promise<void>;
   login: (email: string, password: string) => Promise<void>;
   register: (email: string, password: string) => Promise<void>;

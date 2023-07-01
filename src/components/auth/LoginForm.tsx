@@ -1,70 +1,87 @@
-"use client"
+"use client";
 
-import Link from "next/link";
 import Header from "../shared/Header";
 import Navbar from "../shared/Navbar";
 
-const LoginForm: React.FC = () =>{
-    return (
-        <>
-          <Navbar />
-          <Header name="Login" />
-          <form>
-                <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
-                    <div className="mb-4">
-                        <div className="mb-2">
-                            <label
-                                className="block text-grey-darker text-sm font-bold mb-2"
-                                htmlFor="password"
-                            >
-                                Email
-                            </label>
-                            <input
-                                className="passwordInput shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
-                                id="Email"
-                                type="text"
-                                autoFocus
-                                placeholder="Email"
-                            />
-                        </div>
+const LoginForm: React.FC = () => {
+  return (
+    <>
+      <Navbar />
+      <Header name="Login" />
+      <div className="bg-white lg:w-4/12 md:6/12 w-10/12 m-auto my-10 shadow-md">
+        <div className="py-8 px-8 rounded-xl">
+          <form action="" className="mt-6">
+            <div className="my-5 text-sm">
+              <label htmlFor="username" className="block text-black">
+                Username
+              </label>
+              <input
+                type="text"
+                autoFocus
+                id="username"
+                className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full"
+                placeholder="Username"
+              />
+            </div>
+            <div className="my-5 text-sm">
+              <label htmlFor="password" className="block text-black">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="rounded-sm px-4 py-3 mt-3 focus:outline-none bg-gray-100 w-full"
+                placeholder="Password"
+              />
+              <div className="flex justify-end mt-2 text-xs text-gray-600">
+                <a href="#">Forget Password?</a>
+              </div>
+            </div>
 
-                        <div className="mb-2">
-                            <label
-                                className="block text-grey-darker text-sm font-bold mb-2"
-                                htmlFor="password"
-                            >
-                                Heslo
-                            </label>
-                            <input
-                                className="passwordInput shadow appearance-none border border-red rounded w-full py-2 px-3 text-grey-darker mb-3"
-                                id="Heslo"
-                                type="password"
-                                autoFocus
-                                autoComplete="current-password"
-                                placeholder="********************************************"
-                            />
-                        </div>
-                        <div>
-                            <button
-                                className="mt-4 bg-red-700 rounded-lg p-2 text-white"
-                                type="submit"
-                            >
-                                Prihlásenie
-                            </button>
-                            <div>
-                                <Link
-                                    className="mt-4 inline-block align-baseline font-bold text-2xl text-blue hover:text-blue-darker"
-                                    href="/admin/register"
-                                >
-                                    Registrácia
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </>
-    )
-}
+            <button className="block text-center text-white bg-gray-800 p-3 duration-300 rounded-sm hover:bg-black w-full">
+              Login
+            </button>
+          </form>
+
+          <div className="flex md:justify-between justify-center items-center mt-10">
+            <div
+              style={{ height: "1px" }}
+              className="bg-gray-300 md:block hidden w-4/12"
+            ></div>
+            <p className="md:mx-2 text-sm font-light text-gray-400">
+              {" "}
+              Login With Social{" "}
+            </p>
+            <div
+              style={{ height: "1px" }}
+              className="bg-gray-300 md:block hidden w-4/12"
+            ></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-2 mt-7">
+            <div>
+              <button className="text-center w-full text-white bg-blue-900 p-3 duration-300 rounded-sm hover:bg-blue-700">
+                Facebook
+              </button>
+            </div>
+            <div>
+              <button className="text-center w-full text-white bg-blue-400 p-3 duration-300 rounded-sm hover:bg-blue-500">
+                Twitter
+              </button>
+            </div>
+          </div>
+
+          <p className="mt-12 text-xs text-center font-light text-gray-400">
+            Don't have an account?{" "}
+            <a href="#" className="text-black font-medium">
+              {" "}
+              Create One{" "}
+            </a>
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default LoginForm;
