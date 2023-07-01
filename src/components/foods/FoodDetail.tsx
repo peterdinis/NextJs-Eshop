@@ -1,158 +1,182 @@
-import Carousel, {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext
-} from "pure-react-carousel";
+"use client"
 
-const FoodDetail: React.FC = () => {
-  return (
-    <div className="bg-gray-800">
-      <div className="2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
-        <div id="viewerButton" className=" w-full flex justify-center">
-          <button className="bg-white text-indigo-600 shadow-md rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600 py-5 px-10 font-semibold">
-            Open Quick View
-          </button>
-        </div>
-        <div id="viewerBox" className="lg:p-10 md:p-6 p-4 bg-white">
-          <div className="flex justify-end">
-            <button
-              aria-label="Close"
-              className="focus:outline-none focus:ring-2 focus:ring-gray-800"
-            >
-              <svg
-                width={32}
-                height={32}
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M17.8799 15.9996L23.6133 10.2796C23.8643 10.0285 24.0054 9.688 24.0054 9.33293C24.0054 8.97786 23.8643 8.63733 23.6133 8.38626C23.3622 8.13519 23.0217 7.99414 22.6666 7.99414C22.3115 7.99414 21.971 8.13519 21.7199 8.38626L15.9999 14.1196L10.2799 8.38626C10.0288 8.13519 9.68832 7.99414 9.33325 7.99414C8.97818 7.99414 8.63766 8.13519 8.38659 8.38626C8.13551 8.63733 7.99446 8.97786 7.99446 9.33293C7.99446 9.688 8.13551 10.0285 8.38659 10.2796L14.1199 15.9996L8.38659 21.7196C8.26161 21.8435 8.16242 21.991 8.09473 22.1535C8.02704 22.316 7.99219 22.4902 7.99219 22.6663C7.99219 22.8423 8.02704 23.0166 8.09473 23.179C8.16242 23.3415 8.26161 23.489 8.38659 23.6129C8.51054 23.7379 8.658 23.8371 8.82048 23.9048C8.98296 23.9725 9.15724 24.0073 9.33325 24.0073C9.50927 24.0073 9.68354 23.9725 9.84602 23.9048C10.0085 23.8371 10.156 23.7379 10.2799 23.6129L15.9999 17.8796L21.7199 23.6129C21.8439 23.7379 21.9913 23.8371 22.1538 23.9048C22.3163 23.9725 22.4906 24.0073 22.6666 24.0073C22.8426 24.0073 23.0169 23.9725 23.1794 23.9048C23.3418 23.8371 23.4893 23.7379 23.6133 23.6129C23.7382 23.489 23.8374 23.3415 23.9051 23.179C23.9728 23.0166 24.0077 22.8423 24.0077 22.6663C24.0077 22.4902 23.9728 22.316 23.9051 22.1535C23.8374 21.991 23.7382 21.8435 23.6133 21.7196L17.8799 15.9996Z"
-                  fill="#1F2937"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="mt-3 md:mt-4 lg:mt-0 flex flex-col lg:flex-row items-stretch justify-center lg:space-x-8">
-            <CarouselProvider
-              naturalSlideWidth={100}
-              isIntrinsicHeight={true}
-              totalSlides={3}
-              className="lg:w-1/2 flex justify-between items-strech bg-gray-50 px-2 py-20 md:py-6 md:px-6 lg:py-24"
-              naturalSlideHeight={0}
-            >
-              <div className="flex items-center">
-                <ButtonBack
-                  aria-label="slide back"
-                  className="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100"
-                  role="button"
-                >
-                  <svg
-                    className="w-10 h-10 lg:w-16 lg:h-16"
-                    viewBox="0 0 64 64"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M40 16L24 32L40 48"
-                      stroke="#1F2937"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </ButtonBack>
-              </div>
-              <div className="slider">
-                <div className="slide-ana lg:relative">
-                  <Slider>
-                    <Slide index={0}>
-                      <div className="flex">
-                        <img
-                          src="https://i.ibb.co/fMGD6ZC/eugene-chystiakov-3ne-Swyntb-Q8-unsplash-1-removebg-preview-3-1.png"
-                          alt="A black chair with wooden legs"
-                          className="w-full h-full"
-                        />
-                      </div>
-                    </Slide>
-                    <Slide index={1}>
-                      <div className="flex">
-                        <img
-                          src="https://i.ibb.co/fMGD6ZC/eugene-chystiakov-3ne-Swyntb-Q8-unsplash-1-removebg-preview-3-1.png"
-                          alt="A black chair with wooden legs"
-                          className="w-full h-full"
-                        />
-                      </div>
-                    </Slide>
-                    <Slide index={2}>
-                      <div className="flex">
-                        <img
-                          src="https://i.ibb.co/fMGD6ZC/eugene-chystiakov-3ne-Swyntb-Q8-unsplash-1-removebg-preview-3-1.png"
-                          alt="A black chair with wooden legs"
-                          className="w-full h-full"
-                        />
-                      </div>
-                    </Slide>
-                  </Slider>
+import React, { useState } from "react";
+
+const FoodDetail = () => {
+    const [color, setColor] = useState("White");
+    const [size, setSize] = useState("");
+    const [menu, setMenu] = useState(true);
+    const [slide, setSlide] = useState(true);
+
+    const slideToggle = () => setSlide(!slide);
+
+    const getColor = (value: React.SetStateAction<string>) => {
+        setColor(value);
+    };
+
+    const getSize = (value: React.SetStateAction<string>) => {
+        setSize(value);
+    };
+
+    return (
+        <div>
+            <div className="flex justify-center items-center">
+                <div id="menu" className={"md:px-6 px-4 py-12 w-full h-full flex justify-center" + (menu ? "block" : "hidden")}>
+                    <div className="2xl:container 2xl:mx-auto relative  flex justify-start w-96 md:w-10/12 xl:w-8/12 2xl:w-7/12 item-start flex-col lg:flex-row   lg:space-x-8 py-12 md:py-16 lg:py-12 px-4 md:px-8 lg:px-24 bg-white">
+                        <div className="w-full">
+                            <div className="relative">
+                                <div className="slider">
+                                    <div className="slide-ana flex flex-shrink-0">
+                                        <div className={"flex flex-shrink-0 transform " + (slide ? "translate-x-0" : "-translate-x-full")}>
+                                            <img className=" lg:block hidden w-full h-full object-center object-cover" src="https://i.ibb.co/wBknrzK/pexels-monstera-6311641-1-2.png" alt="A girl posing front" />
+                                            <img className=" hidden md:block lg:hidden w-full h-full object-center object-cover" src="https://i.ibb.co/JqhZhhp/pexels-monstera-6311641-1-3.png" alt="A girl posing front" />
+                                            <img className=" block md:hidden w-full h-full object-center object-cover" src="https://i.ibb.co/FXb2RfJ/pexels-dominika-roseclay-5462562-1.png" alt="A girl posing front" />
+                                        </div>
+                                        <div className={"flex flex-shrink-0 transform " + (slide ? "translate-x-full" : "translate-x-0")}>
+                                            <img className=" lg:block hidden w-full h-full object-center object-cover" src="https://i.ibb.co/FwRy0WL/pexels-monstera-6311575-2-1.png" alt="A girl posing Back" />
+                                            <img className=" hidden md:block lg:hidden w-full h-full object-center object-cover" src="https://i.ibb.co/k0bJRQk/pexels-monstera-6311575-3-1.png" alt="A girl posing Back" />
+                                            <img className=" block md:hidden w-full h-full object-center object-cover" src="https://i.ibb.co/0f1gRTt/pexels-monstera-6311575-4.png" alt="A girl posing Back" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className=" transition duration-150 absolute bottom-0 w-full h-full flex justify-between items-center px-4">
+                                    <button onClick={slideToggle} aria-label="previous" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 rounded-full flex justify-center items-center">
+                                        <svg className="" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="26" cy="26" r="26" fill="white" />
+                                            <path d="M28.4987 19.333L21.832 25.9997L28.4987 32.6663" stroke="#4B5563" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <button onClick={slideToggle} aria-label="Next" className=" focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 rounded-full flex justify-center items-center">
+                                        <svg className="" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="26" cy="26" r="26" fill="white" />
+                                            <path d="M23.5013 19.333L30.168 25.9997L23.5013 32.6663" stroke="#4B5563" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-6 md:mt-8 lg:mt-0 flex justify-start items-start w-full flex-col space-y-6">
+                            <h2 className=" lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 font-semibold">Plain White Tshirt</h2>
+                            <div className=" flex justify-start items-center mt-4">
+                                <p className="font-normal text-lg leading-6 text-gray-600 mr-4">$190</p>
+                                <div className="cursor-pointer flex space-x-2 mr-3">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M16.0972 19.25C15.9506 19.2506 15.806 19.216 15.6755 19.1492L11.0005 16.7017L6.32551 19.1492C6.17371 19.229 6.00255 19.2647 5.8315 19.252C5.66045 19.2394 5.49637 19.1791 5.35791 19.0779C5.21945 18.9767 5.11216 18.8386 5.04824 18.6795C4.98433 18.5203 4.96635 18.3464 4.99635 18.1775L5.91301 13.0167L2.13635 9.35003C2.01852 9.23244 1.93493 9.08499 1.89456 8.9235C1.85418 8.762 1.85855 8.59256 1.90718 8.43336C1.96031 8.27044 2.05804 8.12568 2.18929 8.0155C2.32053 7.90532 2.48003 7.83414 2.64968 7.81003L7.87468 7.04919L10.1755 2.34669C10.2506 2.19171 10.3678 2.061 10.5137 1.96955C10.6596 1.8781 10.8283 1.82959 11.0005 1.82959C11.1727 1.82959 11.3414 1.8781 11.4873 1.96955C11.6333 2.061 11.7505 2.19171 11.8255 2.34669L14.1538 7.04003L19.3788 7.80086C19.5485 7.82497 19.708 7.89616 19.8392 8.00634C19.9705 8.11652 20.0682 8.26128 20.1213 8.42419C20.17 8.58339 20.1743 8.75283 20.134 8.91433C20.0936 9.07582 20.01 9.22327 19.8922 9.34086L16.1155 13.0075L17.0322 18.1684C17.0649 18.3402 17.0478 18.5178 16.9828 18.6803C16.9178 18.8427 16.8077 18.9832 16.6655 19.085C16.4995 19.2014 16.2997 19.2594 16.0972 19.25Z"
+                                                fill="#1F2937"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="22" height="22" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M16.0972 19.25C15.9506 19.2506 15.806 19.216 15.6755 19.1492L11.0005 16.7017L6.32551 19.1492C6.17371 19.229 6.00255 19.2647 5.8315 19.252C5.66045 19.2394 5.49637 19.1791 5.35791 19.0779C5.21945 18.9767 5.11216 18.8386 5.04824 18.6795C4.98433 18.5203 4.96635 18.3464 4.99635 18.1775L5.91301 13.0167L2.13635 9.35003C2.01852 9.23244 1.93493 9.08499 1.89456 8.9235C1.85418 8.762 1.85855 8.59256 1.90718 8.43336C1.96031 8.27044 2.05804 8.12568 2.18929 8.0155C2.32053 7.90532 2.48003 7.83414 2.64968 7.81003L7.87468 7.04919L10.1755 2.34669C10.2506 2.19171 10.3678 2.061 10.5137 1.96955C10.6596 1.8781 10.8283 1.82959 11.0005 1.82959C11.1727 1.82959 11.3414 1.8781 11.4873 1.96955C11.6333 2.061 11.7505 2.19171 11.8255 2.34669L14.1538 7.04003L19.3788 7.80086C19.5485 7.82497 19.708 7.89616 19.8392 8.00634C19.9705 8.11652 20.0682 8.26128 20.1213 8.42419C20.17 8.58339 20.1743 8.75283 20.134 8.91433C20.0936 9.07582 20.01 9.22327 19.8922 9.34086L16.1155 13.0075L17.0322 18.1684C17.0649 18.3402 17.0478 18.5178 16.9828 18.6803C16.9178 18.8427 16.8077 18.9832 16.6655 19.085C16.4995 19.2014 16.2997 19.2594 16.0972 19.25Z"
+                                                fill="#1F2937"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="22" height="22" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M16.0972 19.25C15.9506 19.2506 15.806 19.216 15.6755 19.1492L11.0005 16.7017L6.32551 19.1492C6.17371 19.229 6.00255 19.2647 5.8315 19.252C5.66045 19.2394 5.49637 19.1791 5.35791 19.0779C5.21945 18.9767 5.11216 18.8386 5.04824 18.6795C4.98433 18.5203 4.96635 18.3464 4.99635 18.1775L5.91301 13.0167L2.13635 9.35003C2.01852 9.23244 1.93493 9.08499 1.89456 8.9235C1.85418 8.762 1.85855 8.59256 1.90718 8.43336C1.96031 8.27044 2.05804 8.12568 2.18929 8.0155C2.32053 7.90532 2.48003 7.83414 2.64968 7.81003L7.87468 7.04919L10.1755 2.34669C10.2506 2.19171 10.3678 2.061 10.5137 1.96955C10.6596 1.8781 10.8283 1.82959 11.0005 1.82959C11.1727 1.82959 11.3414 1.8781 11.4873 1.96955C11.6333 2.061 11.7505 2.19171 11.8255 2.34669L14.1538 7.04003L19.3788 7.80086C19.5485 7.82497 19.708 7.89616 19.8392 8.00634C19.9705 8.11652 20.0682 8.26128 20.1213 8.42419C20.17 8.58339 20.1743 8.75283 20.134 8.91433C20.0936 9.07582 20.01 9.22327 19.8922 9.34086L16.1155 13.0075L17.0322 18.1684C17.0649 18.3402 17.0478 18.5178 16.9828 18.6803C16.9178 18.8427 16.8077 18.9832 16.6655 19.085C16.4995 19.2014 16.2997 19.2594 16.0972 19.25Z"
+                                                fill="#1F2937"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="22" height="22" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M16.0972 19.25C15.9506 19.2506 15.806 19.216 15.6755 19.1492L11.0005 16.7017L6.32551 19.1492C6.17371 19.229 6.00255 19.2647 5.8315 19.252C5.66045 19.2394 5.49637 19.1791 5.35791 19.0779C5.21945 18.9767 5.11216 18.8386 5.04824 18.6795C4.98433 18.5203 4.96635 18.3464 4.99635 18.1775L5.91301 13.0167L2.13635 9.35003C2.01852 9.23244 1.93493 9.08499 1.89456 8.9235C1.85418 8.762 1.85855 8.59256 1.90718 8.43336C1.96031 8.27044 2.05804 8.12568 2.18929 8.0155C2.32053 7.90532 2.48003 7.83414 2.64968 7.81003L7.87468 7.04919L10.1755 2.34669C10.2506 2.19171 10.3678 2.061 10.5137 1.96955C10.6596 1.8781 10.8283 1.82959 11.0005 1.82959C11.1727 1.82959 11.3414 1.8781 11.4873 1.96955C11.6333 2.061 11.7505 2.19171 11.8255 2.34669L14.1538 7.04003L19.3788 7.80086C19.5485 7.82497 19.708 7.89616 19.8392 8.00634C19.9705 8.11652 20.0682 8.26128 20.1213 8.42419C20.17 8.58339 20.1743 8.75283 20.134 8.91433C20.0936 9.07582 20.01 9.22327 19.8922 9.34086L16.1155 13.0075L17.0322 18.1684C17.0649 18.3402 17.0478 18.5178 16.9828 18.6803C16.9178 18.8427 16.8077 18.9832 16.6655 19.085C16.4995 19.2014 16.2997 19.2594 16.0972 19.25Z"
+                                                fill="#1F2937"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="22" height="22" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clipPath="url(#clip0)">
+                                            <path
+                                                d="M2.76556 8.70194L2.76068 8.70696L2.75719 8.71056L2.75246 8.70902L1.90718 8.43336L2.75837 8.69339M2.76556 8.70194L2.75837 8.69339M2.76556 8.70194L2.77032 8.69704L2.76556 8.70194ZM2.76556 8.70194L2.75837 8.69339M15.1929 13.1714L16.1062 18.313L16.0985 18.313L11.4351 15.8716L11.0005 15.6441L10.5659 15.8716L5.92615 18.3006L6.83558 13.1806L6.92255 12.6909L6.56571 12.3444L2.84177 8.72894L8.0097 7.97641L8.49902 7.90516L8.71634 7.461L11.0006 2.79232L13.3145 7.45644L13.5328 7.89647L14.0188 7.96725L19.1868 8.71977L15.4628 12.3352L15.106 12.6817L15.1929 13.1714Z"
+                                                stroke="#1F2937"
+                                                strokeWidth="1.874"
+                                            />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="22" height="22" fill="white" transform="translate(0.363281)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <p className=" font-normal text-sm leading-3 hover:text-gray-700 duration-100 cursor-pointer text-gray-500 underline">18 reviews</p>
+                            </div>
+                            <div className="  mt-10">
+                                <p id="text" className=" font-semibold text-base leading-4 text-gray-800">
+                                    {color}
+                                </p>
+                                <div className=" flex space-x-2 mt-4">
+                                    <div  onClick={() => getColor("White")} className="focus:outline-none ring-1 ring-offset-2 ring-gray-800 rounded-full cursor-pointer w-8 h-8 bg-gray-50"></div>
+                                    <div  onClick={() => getColor("Red")} className="focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-gray-800 rounded-full cursor-pointer w-8 h-8 bg-red-700"></div>
+                                    <div  onClick={() => getColor("Yellow")} className="focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-gray-800 rounded-full cursor-pointer w-8 h-8 bg-yellow-300"></div>
+                                </div>
+                            </div>
+                            <div className=" mt-10 w-full">
+                                <div className=" flex justify-between">
+                                    <p className="font-semibold text-base leading-4 text-gray-800">Size</p>
+                                    <p className="cursor-pointer hover:text-gray-800 font-medium text-base leading-4 text-gray-500 underline">Size guide</p>
+                                </div>
+                                <div className=" grid grid-cols-3 gap-10 sm:flex sm:flex-wrap md:gap-4 sm:justify-between lg:justify-start mt-4">
+                                    <div onClick={() => getSize("XSS")} id="XSS" className={"font-medium text-base leading-4 text-gray-800 border py-3 w-20 text-center cursor-pointer " + (size === "XSS" ? "border-gray-500" : "border-gray-200")}>
+                                        XXS
+                                    </div>
+                                    <div onClick={() => getSize("XS")} id="XS" className={"font-medium text-base leading-4 text-gray-800 border  py-3 w-20 text-center cursor-pointer " + (size === "XS" ? "border-gray-500" : "border-gray-200")}>
+                                        XS
+                                    </div>
+                                    <div onClick={() => getSize("S")} id="S" className={"font-medium text-base leading-4 text-gray-800 border py-3 w-20 text-center cursor-pointer " + (size === "S" ? "border-gray-500" : "border-gray-200")}>
+                                        S
+                                    </div>
+                                    <div onClick={() => getSize("M")} id="M" className={"font-medium text-base leading-4 text-gray-800 border py-3 w-20 text-center cursor-pointer " + (size === "M" ? "border-gray-500" : "border-gray-200")}>
+                                        M
+                                    </div>
+                                    <div onClick={() => getSize("L")} id="L" className={"font-medium text-base leading-4 text-gray-800 border py-3 w-20 text-center cursor-pointer " + (size === "L" ? "border-gray-500" : "border-gray-200")}>
+                                        L
+                                    </div>
+                                    <div onClick={() => getSize("XL")} id="XL" className={"font-medium text-base leading-4 text-gray-800 border py-3 w-20 text-center cursor-pointer " + (size === "XL" ? "border-gray-500" : "border-gray-200")}>
+                                        XL
+                                    </div>
+                                </div>
+                            </div>
+                            <p className=" mt-4 font-normal text-sm leading-3 text-gray-500 hover:text-gray-600 duration-100 underline cursor-pointer">Find the perfect size?</p>
+
+                            <div className="flex flex-col w-full space-y-4 mt-10">
+                                <button className="border border-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 md:w-96 w-full hover:bg-black text-base font-medium leading-4 bg-gray-800 py-4 text-white">Add to Bag</button>
+                                <button className="border border-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 md:w-96 w-full hover:bg-gray-300 text-base font-medium leading-4 text-gray-800 py-4 bg-white">Add to Wishlist</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className="flex items-center">
-                <ButtonNext
-                  role="button"
-                  aria-label="next slide"
-                  className="cursor-pointer ml-2"
-                >
-                  <svg
-                    className="w-10 h-10 lg:w-16 lg:h-16"
-                    viewBox="0 0 64 64"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M24 16L40 32L24 48"
-                      stroke="#1F2937"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </ButtonNext>
-              </div>
-            </CarouselProvider>
-            <div className="lg:w-1/2 flex flex-col justify-center mt-7 md:mt-8 lg:mt-0 pb-8 lg:pb-0">
-              <h1 className="text-3xl lg:text-4xl font-semibold text-gray-800">
-                Bar Stool
-              </h1>
-              <p className="text-base leading-normal text-gray-600 mt-2">
-                You don't just want to be comfortable sitting in a bar stool—you
-                want to be comfortable shimmying it up to the bar, closer to
-                your lover, or back slightly to include a third person in the
-                conversation.
-              </p>
-              <p className="text-3xl font-medium text-gray-600 mt-8 md:mt-10">
-                $790
-              </p>
-              <div className="flex items-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8 mt-8 md:mt-16">
-                <button className="w-full md:w-3/5 border border-gray-800 text-base font-medium leading-none text-white uppercase py-6 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-gray-800 text-white">
-                  Add to Cart
-                </button>
-                <button className="w-full md:w-2/5 border border-gray-800 text-base font-medium leading-none text-gray-800 uppercase py-6 bg-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-gray-800 hover:text-white">
-                  View Details
-                </button>
-              </div>
-              <div className="mt-6">
-                <button className="text-xl underline text-gray-800 capitalize hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800">
-                  add to wishlist
-                </button>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default FoodDetail;
