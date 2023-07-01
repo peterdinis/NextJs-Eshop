@@ -12,12 +12,6 @@ datasource db {
 }
 
 
-model User {
-  id       Int    @id @default(autoincrement())
-  email    String @unique
-  password String
-}
-
 model Food {
   id          Int      @id @default(autoincrement())
   name        String
@@ -29,6 +23,11 @@ model Food {
   card        Card[]
   category    Category @relation(fields: [categoryId], references: [id])
   categoryId  Int
+}
+
+model User {
+  id          Int    @id @default(autoincrement())
+  email String
 }
 
 model Category {
@@ -44,4 +43,10 @@ model Card {
   foodId     Int
   amount     Int     @default(1)
   totalPrice Decimal
+}
+
+model Order {
+  id         Int     @id @default(autoincrement())
+  email String
+
 }
