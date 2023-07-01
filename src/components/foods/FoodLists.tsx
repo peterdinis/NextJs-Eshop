@@ -83,7 +83,7 @@ const FoodLists: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link href="/">DETAIL</Link>
+            <Link href="/detail/1">DETAIL</Link>
           </motion.div>
         </motion.div><motion.div
           className="bg-white p-4 shadow-md rounded-md"
