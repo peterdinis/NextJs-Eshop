@@ -84,6 +84,6 @@ export default function AuthContextProvider({ children }: { children: React.Reac
     logout,
     forgotPassword,
     resetPassword,
-  };
+  } as any; // TODO: Later remove any
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
