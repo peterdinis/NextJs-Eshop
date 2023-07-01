@@ -1,5 +1,6 @@
 import { Toaster } from 'react-hot-toast';
 import '../styles/main.css'
+import "pure-react-carousel/dist/react-carousel.es.css";
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] });
