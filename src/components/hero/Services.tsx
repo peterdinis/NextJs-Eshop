@@ -41,9 +41,9 @@ const Services = () => {
             Our Services
           </h1>
           <p className="text-base leading-6 mt-4 text-gray-600">
-            Get inspired by our curated selection of luxiwood interiors. We
-            hope to inspire you to have a luxiwood interior yourself. You'll
-            find tips here on where you can buy a lot of cool furniture.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia aspernatur neque quo hic veniam obcaecati vel veritatis nulla quaerat sit!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam facilis pariatur delectus alias iusto nisi saepe quam repudiandae libero.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo doloremque error soluta dolor esse excepturi, corrupti quibusdam porro facere ducimus?
           </p>
           <Link
             href="/foods"
