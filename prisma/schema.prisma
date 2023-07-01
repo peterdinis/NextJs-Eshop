@@ -34,7 +34,7 @@ model Food {
 model Category {
   id          Int    @id @default(autoincrement())
   name        String @unique
-  description String
+  image       String
   foods       Food[]
 }
 
